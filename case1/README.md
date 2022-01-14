@@ -28,8 +28,8 @@ El objetivo de este repositorio es mostrar como desplegar automáticamente desde
 
 1) Clonamos el repositorio en la carpeta
 2) Ejecutamos terraform int, para que terraform baje los plugins necesarios
-3) Ejecutamos terraform plan
-4) Ejecutamos terrafom apply para que realice el despliegue.
+3) Ejecutamos terraform plan -var aws_access_key=XXXX -var aws_secret_key=XXX -out plan.tfplan
+4) Ejecutamos terrafom apply -var aws_access_key=XXXX -var aws_secret_key=XXX para que realice el despliegue.
 5) Vamos a muestra cuenta de AWS para verificar que se haya realizado el despliegue
 6) Nos conectamos a nuestra instancia y corremos el comando sudo docker ps -a para verificar que el container con la imagen Nginx este corriendo. 
 7) Copiamos la ip publica de nuestra instancia y ponemos en nuestro navegador, se mostrar la página de inicio de Ngnix.
